@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dotclaude — Library</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#/" title="Dashboard">dotclaude</a>
+      <!-- 0023: reads "Workspace · <name>" when the app was launched against a workspace.json.
+           Set from /api/index's stats, so a snapshot-first paint already says which corpus. -->
+      <span class="tab" id="tab">Library</span>
+      <nav class="tabs">
+        <a href="#/">Dashboard</a>
+        <a href="#/duplicates">Duplicates</a>
+        <a href="#/tags">Tags</a>
+      </nav>
+      <span class="meta" id="meta"></span>
+      <button id="rescan" class="ghost-button" title="Rescan the filesystem">⟳ Rescan</button>
+      <button id="palette-open" class="ghost-button" title="Command palette (⌘K)">⌘K</button>
+      <button id="theme" class="ghost-button" title="Theme: follows the OS until you choose">◐</button>
+    </header>
+    <main>
+      <nav id="sidebar">
+        <div class="search-wrap">
+          <input id="search" type="search" placeholder="Search…" autocomplete="off" spellcheck="false" />
+          <div id="facets" class="facets"></div>
+        </div>
+        <!-- 0017: folder scope. A view filter over §7's `source:` operator — the index is
+             never narrowed, so §4/§5/§6 keep seeing the whole corpus. -->
+        <div id="folders" class="folders"></div>
+        <div id="list"></div>
+      </nav>
+      <article id="detail"></article>
+      <aside id="rail"></aside>
+    </main>
+
+    <div id="palette" class="palette" hidden>
+      <div class="palette-box">
+        <input id="palette-input" type="text" placeholder="Jump to an artifact, or a command…" autocomplete="off" />
+        <div id="palette-results" class="palette-results"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

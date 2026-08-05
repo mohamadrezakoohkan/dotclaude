@@ -1,0 +1,13 @@
+{
+  "name": "dotclaude",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Indexes .claude/ and .cursor/ artifacts across folders and presents them as a linked wiki",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/run.test.mjs",
+    "validate": "node src/cli.js validate"
+  }
+}

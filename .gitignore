@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+.dotclaude-cache/
+
+# QA screenshot output. Narrow on purpose — M7 is a design-system milestone and
+# a blanket *.png would silently swallow real assets.
+.playwright-mcp/
+# QA screenshots. Visual evidence for a milestone or a feature is recorded in the
+# plan or the record that cites it; the image itself stays local, which is why the
+# six m0–m7 milestone screenshots were never committed.
+# Still narrow on purpose — anchored to the repo root only, so a real asset inside
+# public/ or docs/ is never silently swallowed. Widened from `/m[0-9]-*.png` once
+# post-v1 features started producing screenshots too (0017's folder-scope pair).
+/*.png
+
+# Your real source list maps your machine (record 0021). Copy sources.example.json.
+sources.json
+
+# Backups of untracked-but-precious config (0021 removed the checkout safety net).
+*.bak

@@ -1,0 +1,9 @@
+{
+  "_comment": "Workspace file (record 0023, specs/003-workspace-mode/contracts/workspace-json.md). Copy this to <your-project>/.claude/workspace.json and start dotclaude with: npm start -- --workspace <your-project>. The leading `--` is required, because `--workspace` is also npm's own monorepo flag. Only the sources below are indexed; sources.json is not read. Relative paths resolve against THIS FILE's directory, so `..` from `<project>/.claude/` means the project itself. Fields are §2's source contract, unchanged: name, type, path, priority (higher wins shadowing, §5).",
+  "name": "your-project",
+  "sources": [
+    { "name": "your-project", "type": "local", "path": "..", "priority": 100 },
+    { "name": "team-shared", "type": "local", "path": "~/code/team/.claude", "priority": 100 },
+    { "name": "personal", "type": "local", "path": "~/.claude", "priority": 50 }
+  ]
+}

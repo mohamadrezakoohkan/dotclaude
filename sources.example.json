@@ -1,0 +1,29 @@
+{
+  "_comment": "Registered sources (spec §2). priority: higher wins shadowing (§5). §13 defaults are project 100 > personal 50 > plugin 10. Each repo is its own source so §5 can see cross-repo duplicates. Nested roots are allowed: per record 0009 the innermost registered source owns a file, so project-ios inside ai-dev-harness does not double-index.",
+  "sources": [
+    {
+      "name": "personal",
+      "type": "local",
+      "path": "~/.claude",
+      "priority": 50
+    },
+    {
+      "name": "project-a",
+      "type": "local",
+      "path": "~/code/your-repo",
+      "priority": 100
+    },
+    {
+      "name": "project-b",
+      "type": "local",
+      "path": "~/code/another-repo",
+      "priority": 100
+    },
+    {
+      "name": "dotclaude",
+      "type": "local",
+      "path": ".",
+      "priority": 100
+    }
+  ]
+}
